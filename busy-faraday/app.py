@@ -168,7 +168,7 @@ with tab1:
         # Left Column: Libraries
         with col_lib:
             st.markdown("#### 🏛️ 무료 대출 (도서관)")
-            lib_sub1, lib_sub2 = st.tabs(["대구통합도서관", "영남대학교 중앙도서관"])
+            lib_sub1, lib_sub2 = st.tabs([f"대구통합도서관 ({len(daegu_results)}건)", f"영남대학교 중앙도서관 ({len(yu_results)}건)"])
             
             with lib_sub1:
                 if daegu_results:
@@ -205,7 +205,7 @@ with tab1:
         # Right Column: Bookstores
         with col_store:
             st.markdown("#### 🛒 구매 (새책 & 중고매장)")
-            store_sub1, store_sub2, store_sub3 = st.tabs(["알라딘 중고(대구)", "교보문고", "알라딘 온라인"])
+            store_sub1, store_sub2, store_sub3 = st.tabs([f"알라딘 중고(대구) ({len(aladin_used_stocks)}건)", f"교보문고 ({len(kyobo_results)}건)", f"알라딘 온라인 ({len(aladin_results)}건)"])
 
             with store_sub1:
                 st.caption("대구 동성로점 / 상인점 등 오프라인 중고 매장 재고")
